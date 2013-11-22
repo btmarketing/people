@@ -1,6 +1,4 @@
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
-
 html,
 body {
   font-family: 'Helvetica', Arial, sans-serif;
@@ -11,7 +9,7 @@ body {
   overflow: hidden;
   background: #000000;
 }
-a:hover{
+a {
   color: #66b3ff;
   text-decoration: none;
 }
@@ -24,7 +22,7 @@ a:hover{
 #top {
   background: url('../images/bg.jpg') no-repeat center top fixed;
   background-size: 100% auto;
-  padding-top: 8%;
+  padding-top: 7.97%;
   top: 0;
   height: 100%;
   width: 100%;
@@ -35,7 +33,7 @@ a:hover{
   transition: opacity 2000ms;
 }
 #bottom {
-  background: #333333;
+  background: #363637 url('../images/btm.jpg');
   position: absolute;
   top: 100%;
   width: 100%;
@@ -63,27 +61,43 @@ a:hover{
   -o-transition: opacity 1500ms;
   transition: opacity 1500ms;
 }
-
-.btn-container,
-.btn-container-2 {
+.btn-container {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 25px;
   position: relative;
 }
-
 .btn {
+  color: #4E4E4E;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
   opacity: 0;
-  -webkit-transition: opacity 1500ms;
-  -moz-transition: opacity 1500ms;
-  -ms-transition: opacity 1500ms;
-  -o-transition: opacity 1500ms;
-  transition: opacity 1500ms;
+  -webkit-transition: opacity 2400ms;
+  -moz-transition: opacity 2400ms;
+  -ms-transition: opacity 2400ms;
+  -o-transition: opacity 2400ms;
+  transition: opacity 2400ms;
 }
-
+.logo {
+  margin-left: 25%;
+}
+.divider {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: block;
+  position: relative;
+  margin-bottom: 16px;
+}
+hr {
+  border: 1px solid #999999;
+}
 .overlaytext {
-  color: #cccccc;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-right: 25%;
   margin-left: 25%;
   top: 0;
@@ -94,16 +108,19 @@ a:hover{
 }
 .overlaytext h4 {
   color: #ecf0f1;
-  font-family: 'Oswald', Arial, sans-serif;
-  font-weight: 300;
-  text-transform: capitalize;
-  margin-top:16px;
-  margin-bottom:16px;
+  font-family: 'Helvetica Bold', Arial, sans-serif;
+  font-weight: 400;
+  margin-top:34px;
+  margin-bottom:34px;
   line-height: 22px;
   font-size: 20px;
 }
 .overlaytext p {
-  line-height: 16px;
+  color: #cccccc;
+  font-family: 'Helvetica Regular', Arial, sans-serif;
+  margin-top:28px;
+  margin-bottom:28px;
+  line-height: 18px;
   font-size: 14px;
 }
 .totop {
@@ -114,7 +131,6 @@ a:hover{
 .fade {
   opacity: 0;
 }
-
 #fadeit {
   background: rgb(0, 0, 0, 0);
   position: absolute;
@@ -127,9 +143,26 @@ a:hover{
   -o-transition: background 0.5s linear;
   transition: background 0.5s linear;
 }
-
 .hide {
   display: none;
+}
+.down-arrow {
+  color: #ecf0f1;
+  position: relative;
+  bottom: 0;
+}
+.up-arrow {
+  color: #4E4E4E;
+}
+.btn:hover,
+.btn:focus,
+.down-arrow:hover,
+.down-arrow:focus,
+.up-arrow:hover,
+.up-arrow:focus {
+  color: #cccccc;
+  outline: none;
+  text-decoration: none;
 }
 
 /*Mobile Stuff*/
