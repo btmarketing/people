@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BitTorrent | The Internet Should Be People Powered</title>
+    <title>people.com landing page</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
   </head>
@@ -21,20 +21,22 @@
           <iframe id="vidplayer" src="http://player.vimeo.com/video/78380685?api=1&player_id=vidplayer" width="501" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div class="btn-container">
-          <button type="button" class="btn btn-primary btn-sm down-arrow">Down Arrow</button>
+          <button class="btn"><i class="fa fa-angle-down fa-4x down-arrow"></i></button>
         </div>
       </div>
       <div id="bottom" class="hide">
-        <div class="btn-container-2">
-          <button type="button" class="btn btn-primary btn-sm up-arrow">Up Arrow</button>
+        <div class="btn-container">
+          <button class="btn"><i class="fa fa-angle-up fa-4x up-arrow"></i></button>
         </div>
+        <div class="divider"><hr /></div>
+        <div class="logo"><img src="images/logo.png"></div>
       <div class="overlaytext">
-        <h4>We put these billboards up last week in New York, Los Angeles and San Francisco.<br>Because we wanted to remind the world what's at stake on the world wide web.</h4>
+        <h4>We recently put these billboards up in New York, Los Angeles and San Francisco. Because we wanted to remind the world what's at stake on the world wide web.</h4>
         <p>As a society, we've chosen to accept data centrilization: personal information as property of a powerful few. As a society, we've chosen to accept data centrilization: personal information as property of a powerful few. As a society, we've chosen to accept data centrilization: personal information as property of a powerful few.</p>
         <p>All your choice are belong to us.</p>
         <h4>This is the generation that will decide whether the Internet is a tool for control, or a platform for innovation and freedom. We have an incredible opportunity. We can shape the next one and one hundred years of human connection. A free, open Internet is a force for change, creativity; the backbone of a society where citizens are stakeholders, not data sets.</h4>
         <h4>BitTorrent is built to preserve that Internet.</h4>
-        <p>We're a company founded on a few simple core values. Uphold user privacy, and user control. Keep the web free, open; decentralized, and accessible to all. BitTorrent is a people-powered protocol: the architecture of code deployment fot he Internet's dominant applications. We're a company founded on a few simple core values. Uphold user privacy, and user control. Keep the web free, open; decentralized, and accessible to all. BitTorrent is a people-powered protocol: the architecture of code deployment fot he Internet's dominant applications.</p>
+        <p>We're a company founded on a few simple core values. Uphold user privacy, and user control. Keep the web free, open; decentralized, and accessible to all. BitTorrent is a people-powered protocol: the architecture of code deployment fot he Internet's dominant applications. We're a company founded on a few simple core values. Uphold user privacy, and user control. Keep the web free, open; decentralized, and accessible to all. BitTorrent is a people-powered protocol: the architecture of code deployment for the Internet's dominant applications.</p>
         <p>In other words, BitTorrent is not what you think. But it's how the internet should think: people-powered and people-owned, in principle and practice.</p>
         <p>Your data belongs to you. You deserve options. And the Internet is above all else powered by people. Certain freedoms are hardcoded. It is up to us -- it's up to all of us -- to uphold them.</p>
         <p><a href="http://www.bittorrent.com/">Read More &raquo</a></p>
@@ -56,14 +58,20 @@
   //To prevent scrolling animation on load.
   $(document).ready(function() {
     $('#bottom')
-        .delay(1000)
-        .removeClass('hide');
-    $('.videobox, .btn')
-        .delay(800)
-        .queue(function(next) {
-          $(this).css("opacity", "1");
-          next();
-        });
+      .delay(1000)
+      .removeClass('hide');
+    $('.videobox')
+      .delay(800)
+      .queue(function(next) {
+        $(this).css("opacity", "1");
+        next();
+      });
+    $('.btn')
+      .delay(2200)
+      .queue(function(next) {
+        $(this).css("opacity", "1");
+        next();
+      });
   });
   </script>
   </body>
