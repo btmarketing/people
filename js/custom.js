@@ -15,7 +15,7 @@ $(".down-arrow").click(function(){
   Froogaloop( $('iframe')[0] ).api('pause');
 });
 
-$(".up-arrow").click(function(){
+$(".gotop").click(function(){
   $("#bottom").removeClass("totop");
   $("#top").removeClass("fade");
 });

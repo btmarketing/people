@@ -12,6 +12,7 @@ body {
 a {
   color: #3399ff;
   text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(202, 202, 202, 0.26);
 }
 #wrapper {
   position: absolute;
@@ -33,7 +34,7 @@ a {
   transition: opacity 2000ms;
 }
 #bottom {
-  background: #363637 url('../images/btm.jpg');
+  background: #EEEEEE;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -85,6 +86,7 @@ a {
 }
 .logo {
   margin-left: 20%;
+  display: inline;
 }
 .divider {
   margin-left: 20%;
@@ -92,14 +94,16 @@ a {
   display: block;
   position: relative;
   margin-bottom: 16px;
+  margin-top: 22px;
 }
 hr {
-  border: 1px solid #818181;
+  border: 1px solid #858585;
 }
 .overlaytext {
   margin-top: 2%;
   margin-right: 20%;
   margin-left: 20%;
+  padding-bottom: 60px;
   top: 0;
   left: 0;
   position: relative;
@@ -107,21 +111,23 @@ hr {
   overflow-y: auto;
 }
 .overlaytext h4 {
-  color: #818181;
-  font-family: 'Helvetica Bold', Arial, sans-serif;
-  font-weight: 400;
-  margin-top:34px;
-  margin-bottom:34px;
-  line-height: 22px;
-  font-size: 20px;
-}
+  color: #858585;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 22px;
+  margin-bottom:22px;
+  line-height: 135%;
+  font-size: 26px;
+/*  text-shadow: 0 -1px 0 rgba(202, 202, 202, 0.54);
+*/}
 .overlaytext p {
-  color: #818181;
-  font-family: 'Helvetica Regular', Arial, sans-serif;
-  margin-top:28px;
-  margin-bottom:28px;
-  line-height: 18px;
-  font-size: 14px;
+  color: #525252;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  line-height: 150%;
+  font-size: 17px;
+  font-weight: 100;
 }
 .totop {
   opacity: 1 !important;
@@ -150,19 +156,27 @@ hr {
   color: #ecf0f1;
   position: relative;
   bottom: 0;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
-.up-arrow {
-  color: #818181;
-}
+
 .btn:hover,
 .btn:focus,
 .down-arrow:hover,
 .down-arrow:focus,
 .up-arrow:hover,
-.up-arrow:focus {
+.up-arrow:focus,
+.gotop:hover {
   color: #cccccc;
   outline: none;
   text-decoration: none;
+}
+
+.gotop {
+  float: right;
+  margin-right: 20%;
+  font-size: 14px;
+  color: #b4b4b4;
+  cursor: pointer;
 }
 
 
@@ -170,8 +184,8 @@ hr {
 // RESPONSIVE STUFF
 ///////////////////////*/
 
-/*For Desktop*/
-@media (min-width: 1001px) and (max-width: 1200px) {
+/*For Desktop 992 and up*/
+@media (min-width: 992px) {
   #top {
     padding-top: 9.55%;
     padding-left: .06%;
@@ -182,60 +196,86 @@ hr {
   }
 }
 
-@media (min-width: 801px) and (max-width: 1000px) {
+/* small devices and tablets */
+@media (min-width: 768px) {
   #top {
     padding-top: 11.85%;
     padding-left: 0%;
     background-size: 150% auto;
   }
+
   .videobox {
     width: 75%;
   }
+
   .logo {
     margin-left: 12%;
   }
+
+  .gotop {
+    margin-right: 12%;
+  }
+
   .divider, .overlaytext {
     margin-left: 12%;
     margin-right: 12%;
   }
 }
 
-@media (min-width: 701px) and (max-width: 800px) {
+/* mobile devices */
+
+@media (max-width: 768px) {
   #top {
     padding-top: 13%;
     padding-left: .2%;
+    background: url('../images/bg.jpg') no-repeat center top scroll;
     background-size: 165% auto;
+    height: auto;
+    padding-bottom: 13%;
   }
   .videobox {
-    width: 83%;
+    width: 83%;    
   }
   .logo {
     margin-left: 8%;
+  }
+
+  .gotop {
+    margin-right: 8%;
   }
   .divider, .overlaytext {
     margin-left: 8%;
     margin-right: 8%;
   }
-}
+  .overlaytext h4 {
+    font-size: 22px;
+  }
 
-@media (max-width: 700px) {
-  #top {
-    padding-top: 16%;
-    padding-left: .25%;
-    background-size: 198.5% auto;
+  .gotop {
+    display: none;
   }
-  .videobox {
-    width: 100%;
-  }
-  .logo {
-    margin-left: 4%;
-  }
-  .divider, .overlaytext {
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-}
 
-@media (max-width: 600px) {
-  /* Bottom Text Appear No Scroll */
+  .overlaytext p {
+    font-size: 15px;
+  }
+
+  .btn-container {
+    display: none;
+  }
+  
+  html, body, #wrapper, 
+  #top, #bottom {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #bottom {
+    top: auto;
+    height: auto;
+    box-shadow: none;
+    position: static;
+  }
+
+
+
 }
