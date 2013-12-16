@@ -185,7 +185,7 @@ hr {
 ///////////////////////*/
 
 /*For Desktop 992 and up*/
-@media (min-width: 992px) {
+@media (max-width: 1200px) {
   #top {
     padding-top: 9.55%;
     padding-left: .06%;
@@ -197,7 +197,7 @@ hr {
 }
 
 /* small devices and tablets */
-@media (min-width: 768px) {
+@media (min-width: 768px) (max-width: 992px) {
   #top {
     padding-top: 11.85%;
     padding-left: 0%;
