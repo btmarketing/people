@@ -87,17 +87,22 @@ a {
 .logo {
   margin-left: 20%;
   display: inline;
+  max-width: 200px;
 }
+
+.logo img {
+    max-width: 200px;
+  }
 .divider {
   margin-left: 20%;
   margin-right: 20%;
   display: block;
   position: relative;
-  margin-bottom: 16px;
-  margin-top: 22px;
+  margin-bottom: 10px;
+  margin-top: 35px;
 }
 hr {
-  border: 1px solid #858585;
+  border: 2px solid #858585;
 }
 .overlaytext {
   margin-top: 2%;
@@ -134,20 +139,24 @@ hr {
   top: 0 !important;
   z-index: 1001;
 }
-.fade {
-  opacity: 0;
-}
-#fadeit {
-  background: rgb(0, 0, 0, 0);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  -webkit-transition: background 0.5s linear;
-  -moz-transition: background 0.5s linear;
-  -ms-transition: background 0.5s linear;
-  -o-transition: background 0.5s linear;
-  transition: background 0.5s linear;
+
+@media (min-width: 768px) {
+  .fade {
+    opacity: 0;
+  }
+  #fadeit {
+    background: rgb(0, 0, 0, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+  }
+
 }
 .hide {
   display: none;
@@ -185,7 +194,7 @@ hr {
 ///////////////////////*/
 
 /*For Desktop 992 and up*/
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   #top {
     padding-top: 9.55%;
     padding-left: .06%;
@@ -197,7 +206,7 @@ hr {
 }
 
 /* small devices and tablets */
-@media (min-width: 768px) (max-width: 992px) {
+@media screen and (max-width: 992px) {
   #top {
     padding-top: 11.85%;
     padding-left: 0%;
@@ -224,7 +233,7 @@ hr {
 
 /* mobile devices */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #top {
     padding-top: 13%;
     padding-left: .2%;
@@ -242,6 +251,10 @@ hr {
 
   .gotop {
     margin-right: 8%;
+  }
+
+  .down-arrow {
+    display: none;
   }
   .divider, .overlaytext {
     margin-left: 8%;

@@ -25,8 +25,9 @@ $(".gotop").click(function(){
 ////////////////////////////////////////
 $('#top')
   .mousewheel(function(event, delta, deltaX, deltaY) {
-    var scrollPos = delta;
-    if (scrollPos < 0) {
+    var thepos = delta;
+    var scrollPos = thepos;
+    if (scrollPos < 50) {
       $("#bottom").addClass("totop");
       $("#top").addClass("fade");
       console.log($('#bottom').scrollTop())
@@ -36,9 +37,11 @@ $('#top')
 
 $('#bottom')
   .mousewheel(function(event, delta, deltaX, deltaY) {
-    var scrollPos2 = delta;
+    var thepos = delta;
+    var scrollPos2 = thepos;
       // check if user has scrolled to top of container first
-      if ( ( scrollPos2 > 0 ) & ( $('#bottom').scrollTop() == 0 ) ) {
+      if ( ( scrollPos2 > 50 ) & ( $('#bottom').scrollTop() == 0 ) ) {
+        console.log(scrollPos2);
         $("#bottom").removeClass("totop");
         $("#top").removeClass("fade");
       }
@@ -47,20 +50,20 @@ $('#bottom')
 ////////////////////////
 // FOR TOUCH SCROLLING
 ////////////////////////
-$('#top')
-  .on('swipeup', function(e) {
-    $("#bottom").addClass("totop");
-    $("#top").addClass("fade");
-    Froogaloop( $('iframe')[0] ).api('pause');
-  }
-);
+// $('#top')
+//   .on('swipeup', function(e) {
+//     $("#bottom").addClass("totop");
+//     $("#top").addClass("fade");
+//     Froogaloop( $('iframe')[0] ).api('pause');
+//   }
+// );
 
-$('#bottom')
-  .on('swipedown', function(e) {
-    $("#bottom").removeClass("totop");
-    $("#top").removeClass("fade");
-  }
-);
+// $('#bottom')
+//   .on('swipedown', function(e) {
+//     $("#bottom").removeClass("totop");
+//     $("#top").removeClass("fade");
+//   }
+// );
 
 /////////////////////////
 // VIMEO API
